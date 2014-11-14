@@ -106,9 +106,9 @@ Slide with math equation
 ========================================================  
 The normal distribution can be written as 
 
-$f(x)=\frac1{\sqrt{2\pi \sigma^2}} e^{-\frac1{2\sigma^2} (x-\mu)^2}$
+$$f(x)=\frac1{\sqrt{2\pi \sigma^2}} e^{-\frac1{2\sigma^2} (x-\mu)^2}$$
 
-Symbolically we write $X \sim N(\mu, \sigma^2)$
+Symbolically we write $$X \sim N(\mu, \sigma^2)$$
 
 
 Slide with HTML
