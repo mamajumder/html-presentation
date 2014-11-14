@@ -111,4 +111,60 @@ $f(x)=\frac1{\sqrt{2\pi \sigma^2}} e^{-\frac1{2\sigma^2} (x-\mu)^2}$
 Symbolically we write $X \sim N(\mu, \sigma^2)$
 
 
+Slide with HTML
+========================================================  
+<style>
 
+p#myPara{
+  color: steelblue;
+  font-family: garamond;
+  font-size: 1.5em;
+}
+
+</style>
+
+<h1> This is the first heading </h1>
+
+<h2> This is the second heading </h2>
+
+<p id="myPara">This is a paragraph. It contains some plain text. The color, font-size and font-family of the texts are changed using CSS style. To check the HTML codes and tags used for this you may need to review the source codes of this presentation.</p>
+
+
+Slide with D3
+========================================================  
+
+- Notice in the source code, how the HTML tags are written to produce this d3 animation.
+  - the source could be found as .Rpres file 
+  - you can find it on [github](https://github.com/mamajumder/html-presentation)
+
+<head>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<svg width=900 height=350>
+<circle id="c2" cx="100" cy="100" r="30" fill= "steelblue"></circle>
+</svg>
+
+<script>
+animate = function() {
+ d3.select(this).transition().duration(1500)
+   .attr("r", 80).each("end", function () {
+  d3.select(this).transition().duration(1500)
+    .attr("r", 1).each("end", animate)});
+}    
+d3.select("#c2").transition().duration(1000)
+    .attr("r", 1).each("end", animate);
+</script>
+
+
+Save presentation as HTML
+========================================================  
+- At top right corner of RStudio, click on `More`, you will find the following options to save the presentation as HTML document.
+
+![save-Rpres](save-presentation.png)
+
+
+Slide with some reference
+========================================================  
+
+- Github repository for this presentation <br> https://github.com/mamajumder/html-presentation
